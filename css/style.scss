@@ -8,26 +8,47 @@ $img5: url(../img/hut-945496_1280.jpg);
 $img6: url(../img/volkswagen-569315_1280.jpg);
 */
 
-$img: (
-    1: url(../img/turkey-355498_1280.jpg), 
-    2: url(../img/morocco-123970_1280.jpg),
-    3: url(../img/quad-2409489_1280.jpg),
-    4: url(../img/desert-fox-2444230_1280.jpg),
-    5: url(../img/hut-945496_1280.jpg),
-    6: url(../img/volkswagen-569315_1280.jpg),
-    );
+$left: 25%;
+$right: 25%;
 
-$hexagon:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+$img: (
+  1: url(../img/turkey-355498_1280.jpg),
+  2: url(../img/morocco-123970_1280.jpg),
+  3: url(../img/quad-2409489_1280.jpg),
+  4: url(../img/desert-fox-2444230_1280.jpg),
+  5: url(../img/hut-945496_1280.jpg),
+  6: url(../img/volkswagen-569315_1280.jpg)
+);
+
+$top: (
+    1: 10%,
+    2: 10%,
+    3: 10%,
+    4: 34%,
+    5: 34%,
+    6: 58%,
+);
+
+$left: (
+    1: 15%,
+    2: 38%,
+    3: 61%,
+    4: 26.5%,
+    5: 49.5%,
+    6: 38%,
+);
+
+$hexagon: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 
 @mixin flexCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 body,
 html {
-  height: 100%;
+  
   margin: 0;
   font-family: "Montserrat", sans-serif;
   color: aliceblue;
@@ -50,13 +71,14 @@ html {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 header {
   width: auto;
   height: 15vh;
   background-color: black;
-  opacity: 0.5;
+  opacity: 0.3;
   position: sticky;
 }
 
@@ -87,61 +109,86 @@ header {
 }
 
 #hexgrad {
-  height: 100vh;
+  height: 130vh;
   background: linear-gradient(#603022, #eed9d8);
   @include flexCenter;
 }
 
 #hexControl {
-    height: 100%;
-    
-    @include flexCenter;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+ 
+  position: relative; 
 }
 
 @for $i from 1 through 6 {
-    #hexagon#{$i} {
-        height: 40vh;
-        width: 40vh;
-        background-image: map-get($img , $i );
-        background-position: center center;
-        background-size: cover;
-        clip-path: $hexagon;
-        @include flexCenter;
-        flex-direction: column;
-        margin: 0.5rem;
+  #hexagon#{$i} {
+    height: 40vh;
+    width: 40vh;
+    background-image: map-get($img, $i);
+    background-position: center center;
+    background-size: cover;
+    clip-path: $hexagon;
+    @include flexCenter;
+    flex-direction: column;
+    margin: 0.5rem;
+    position: absolute;
+    left: map-get($left, $i);
+    top: map-get($top, $i);
+
+    //loop po mapie z top left etc zrob
     
-                #hexInside {
-                margin-top: 6rem;
-    
-                h1 {
-                    margin: 0.7rem;
-                    text-shadow: 0px 0px 20px black;
-                    font-weight: 400;
-                }
-                }
-    
-                #buttonHex {
-                padding: 5px;
-                border: 1px solid white;
-                font-weight: 100;
-                font-size: 0.7rem;
-                background-color: rgba(0, 0, 0, 0.5);
-                text-transform: uppercase;
-                }
+    filter: brightness(0.5) sepia(0.7);
+    transition: 0.3s;
+
+    &:hover {
+         filter: brightness(1) sepia(0);
+         transform: scale(1.02);
+    }
+
+    #hexInside {
+      margin-top: 6rem;
+      
+
+      h1 {
+        margin: 0.7rem;
+        text-shadow: 0px 0px 20px black;
+        font-weight: 400;
       }
+    }
+
+    #buttonHex {
+      padding: 5px;
+      border: 1px solid white;
+      font-weight: 100;
+      font-size: 0.7rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      text-transform: uppercase;
+      transition: 0.3s;
+      &:hover {
+          transform: scale(1.2)
+      }
+    }
+  }
 }
-
-
 
 #sec2 {
   height: auto;
 }
 
 footer {
-  height: 275px;
+  height: 80%;
   width: 100%;
-  background-color: black;
-  opacity: 0.5;
-  position: relative;
-  top: 68%;
+
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.7) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  
+  position: absolute;
+  bottom: 0;
 }

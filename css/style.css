@@ -8,7 +8,6 @@ $img6: url(../img/volkswagen-569315_1280.jpg);
 */
 body,
 html {
-  height: 100%;
   margin: 0;
   font-family: "Montserrat", sans-serif;
   color: aliceblue;
@@ -31,13 +30,14 @@ html {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 header {
   width: auto;
   height: 15vh;
   background-color: black;
-  opacity: 0.5;
+  opacity: 0.3;
   position: sticky;
 }
 
@@ -68,7 +68,7 @@ header {
 }
 
 #hexgrad {
-  height: 100vh;
+  height: 130vh;
   background: linear-gradient(#603022, #eed9d8);
   display: flex;
   justify-content: center;
@@ -77,9 +77,10 @@ header {
 
 #hexControl {
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 
 #hexagon1 {
@@ -94,6 +95,15 @@ header {
   align-items: center;
   flex-direction: column;
   margin: 0.5rem;
+  position: absolute;
+  left: 15%;
+  top: 10%;
+  filter: brightness(0.5) sepia(0.7);
+  transition: 0.3s;
+}
+#hexagon1:hover {
+  filter: brightness(1) sepia(0);
+  transform: scale(1.02);
 }
 #hexagon1 #hexInside {
   margin-top: 6rem;
@@ -110,6 +120,10 @@ header {
   font-size: 0.7rem;
   background-color: rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
+  transition: 0.3s;
+}
+#hexagon1 #buttonHex:hover {
+  transform: scale(1.2);
 }
 
 #hexagon2 {
@@ -124,6 +138,15 @@ header {
   align-items: center;
   flex-direction: column;
   margin: 0.5rem;
+  position: absolute;
+  left: 38%;
+  top: 10%;
+  filter: brightness(0.5) sepia(0.7);
+  transition: 0.3s;
+}
+#hexagon2:hover {
+  filter: brightness(1) sepia(0);
+  transform: scale(1.02);
 }
 #hexagon2 #hexInside {
   margin-top: 6rem;
@@ -140,6 +163,10 @@ header {
   font-size: 0.7rem;
   background-color: rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
+  transition: 0.3s;
+}
+#hexagon2 #buttonHex:hover {
+  transform: scale(1.2);
 }
 
 #hexagon3 {
@@ -154,6 +181,15 @@ header {
   align-items: center;
   flex-direction: column;
   margin: 0.5rem;
+  position: absolute;
+  left: 61%;
+  top: 10%;
+  filter: brightness(0.5) sepia(0.7);
+  transition: 0.3s;
+}
+#hexagon3:hover {
+  filter: brightness(1) sepia(0);
+  transform: scale(1.02);
 }
 #hexagon3 #hexInside {
   margin-top: 6rem;
@@ -170,6 +206,10 @@ header {
   font-size: 0.7rem;
   background-color: rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
+  transition: 0.3s;
+}
+#hexagon3 #buttonHex:hover {
+  transform: scale(1.2);
 }
 
 #hexagon4 {
@@ -184,6 +224,15 @@ header {
   align-items: center;
   flex-direction: column;
   margin: 0.5rem;
+  position: absolute;
+  left: 26.5%;
+  top: 34%;
+  filter: brightness(0.5) sepia(0.7);
+  transition: 0.3s;
+}
+#hexagon4:hover {
+  filter: brightness(1) sepia(0);
+  transform: scale(1.02);
 }
 #hexagon4 #hexInside {
   margin-top: 6rem;
@@ -200,6 +249,10 @@ header {
   font-size: 0.7rem;
   background-color: rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
+  transition: 0.3s;
+}
+#hexagon4 #buttonHex:hover {
+  transform: scale(1.2);
 }
 
 #hexagon5 {
@@ -214,6 +267,15 @@ header {
   align-items: center;
   flex-direction: column;
   margin: 0.5rem;
+  position: absolute;
+  left: 49.5%;
+  top: 34%;
+  filter: brightness(0.5) sepia(0.7);
+  transition: 0.3s;
+}
+#hexagon5:hover {
+  filter: brightness(1) sepia(0);
+  transform: scale(1.02);
 }
 #hexagon5 #hexInside {
   margin-top: 6rem;
@@ -230,6 +292,10 @@ header {
   font-size: 0.7rem;
   background-color: rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
+  transition: 0.3s;
+}
+#hexagon5 #buttonHex:hover {
+  transform: scale(1.2);
 }
 
 #hexagon6 {
@@ -244,6 +310,15 @@ header {
   align-items: center;
   flex-direction: column;
   margin: 0.5rem;
+  position: absolute;
+  left: 38%;
+  top: 58%;
+  filter: brightness(0.5) sepia(0.7);
+  transition: 0.3s;
+}
+#hexagon6:hover {
+  filter: brightness(1) sepia(0);
+  transform: scale(1.02);
 }
 #hexagon6 #hexInside {
   margin-top: 6rem;
@@ -260,6 +335,10 @@ header {
   font-size: 0.7rem;
   background-color: rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
+  transition: 0.3s;
+}
+#hexagon6 #buttonHex:hover {
+  transform: scale(1.2);
 }
 
 #sec2 {
@@ -267,12 +346,11 @@ header {
 }
 
 footer {
-  height: 275px;
+  height: 80%;
   width: 100%;
-  background-color: black;
-  opacity: 0.5;
-  position: relative;
-  top: 68%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0) 100%);
+  position: absolute;
+  bottom: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
