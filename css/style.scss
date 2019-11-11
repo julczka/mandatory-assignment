@@ -1,8 +1,21 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400&display=swap");
 
-$img1: url(../img/turkey-355498_1280.jpg);
+/*$img1: url(../img/turkey-355498_1280.jpg);
 $img2: url(../img/morocco-123970_1280.jpg);
 $img3: url(../img/quad-2409489_1280.jpg);
+$img4: url(../img/desert-fox-2444230_1280.jpg);
+$img5: url(../img/hut-945496_1280.jpg);
+$img6: url(../img/volkswagen-569315_1280.jpg);
+*/
+
+$img: (
+    1: url(../img/turkey-355498_1280.jpg), 
+    2: url(../img/morocco-123970_1280.jpg),
+    3: url(../img/quad-2409489_1280.jpg),
+    4: url(../img/desert-fox-2444230_1280.jpg),
+    5: url(../img/hut-945496_1280.jpg),
+    6: url(../img/volkswagen-569315_1280.jpg),
+    );
 
 $hexagon:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 
@@ -77,42 +90,46 @@ header {
   height: 100vh;
   background: linear-gradient(#603022, #eed9d8);
   @include flexCenter;
-
-
-  #hexagon1 {
-    height: 40vh;
-    width: 40vh;
-    background-image: $img1;
-    background-position: center center;
-    background-size: cover;
-    clip-path: $hexagon;
-    @include flexCenter;
-    flex-direction: column;
-
-            #hexInside {
-            margin-top: 6rem;
-
-            h1 {
-                margin: 0.7rem;
-                text-shadow: 0px 0px 20px black;
-                font-weight: 400;
-            }
-            }
-
-            #buttonHex {
-            padding: 5px;
-            border: 1px solid white;
-            font-weight: 100;
-            font-size: 0.7rem;
-            background-color: rgba(0, 0, 0, 0.5);
-            text-transform: uppercase;
-            }
-  }
 }
 
+#hexControl {
+    height: 100%;
+    
+    @include flexCenter;
+}
 
-
-
+@for $i from 1 through 6 {
+    #hexagon#{$i} {
+        height: 40vh;
+        width: 40vh;
+        background-image: map-get($img , $i );
+        background-position: center center;
+        background-size: cover;
+        clip-path: $hexagon;
+        @include flexCenter;
+        flex-direction: column;
+        margin: 0.5rem;
+    
+                #hexInside {
+                margin-top: 6rem;
+    
+                h1 {
+                    margin: 0.7rem;
+                    text-shadow: 0px 0px 20px black;
+                    font-weight: 400;
+                }
+                }
+    
+                #buttonHex {
+                padding: 5px;
+                border: 1px solid white;
+                font-weight: 100;
+                font-size: 0.7rem;
+                background-color: rgba(0, 0, 0, 0.5);
+                text-transform: uppercase;
+                }
+      }
+}
 
 
 
