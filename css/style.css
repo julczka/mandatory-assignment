@@ -36,9 +36,10 @@ html {
 header {
   width: auto;
   height: 15vh;
-  background-color: black;
-  opacity: 0.3;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 50%, black 100%);
   position: sticky;
+  position: -webkit-sticky;
+  top: 0;
 }
 
 #sec1 {
@@ -68,7 +69,7 @@ header {
 }
 
 #hexgrad {
-  height: 130vh;
+  height: 110vh;
   background: linear-gradient(#603022, #eed9d8);
   display: flex;
   justify-content: center;
@@ -98,7 +99,7 @@ header {
   margin: 0.5rem;
   position: absolute;
   left: 15%;
-  top: 10%;
+  top: 5%;
   filter: brightness(0.5) sepia(0.7);
   transition: 0.3s;
 }
@@ -107,7 +108,7 @@ header {
   transform: scale(1.02);
 }
 #hexagon1 #hexInside {
-  margin-top: 6rem;
+  margin-top: 10rem;
 }
 #hexagon1 #hexInside h1 {
   margin: 0.7rem;
@@ -115,11 +116,11 @@ header {
   font-weight: 400;
 }
 #hexagon1 #buttonHex {
-  padding: 5px;
+  padding: 9px;
   border: 1px solid white;
-  font-weight: 100;
-  font-size: 0.7rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+  font-size: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.2);
   text-transform: uppercase;
   transition: 0.3s;
 }
@@ -142,7 +143,7 @@ header {
   margin: 0.5rem;
   position: absolute;
   left: 38%;
-  top: 10%;
+  top: 5%;
   filter: brightness(0.5) sepia(0.7);
   transition: 0.3s;
 }
@@ -151,7 +152,7 @@ header {
   transform: scale(1.02);
 }
 #hexagon2 #hexInside {
-  margin-top: 6rem;
+  margin-top: 10rem;
 }
 #hexagon2 #hexInside h1 {
   margin: 0.7rem;
@@ -159,11 +160,11 @@ header {
   font-weight: 400;
 }
 #hexagon2 #buttonHex {
-  padding: 5px;
+  padding: 9px;
   border: 1px solid white;
-  font-weight: 100;
-  font-size: 0.7rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+  font-size: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.2);
   text-transform: uppercase;
   transition: 0.3s;
 }
@@ -186,7 +187,7 @@ header {
   margin: 0.5rem;
   position: absolute;
   left: 61%;
-  top: 10%;
+  top: 5%;
   filter: brightness(0.5) sepia(0.7);
   transition: 0.3s;
 }
@@ -195,7 +196,7 @@ header {
   transform: scale(1.02);
 }
 #hexagon3 #hexInside {
-  margin-top: 6rem;
+  margin-top: 10rem;
 }
 #hexagon3 #hexInside h1 {
   margin: 0.7rem;
@@ -203,11 +204,11 @@ header {
   font-weight: 400;
 }
 #hexagon3 #buttonHex {
-  padding: 5px;
+  padding: 9px;
   border: 1px solid white;
-  font-weight: 100;
-  font-size: 0.7rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+  font-size: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.2);
   text-transform: uppercase;
   transition: 0.3s;
 }
@@ -239,7 +240,7 @@ header {
   transform: scale(1.02);
 }
 #hexagon4 #hexInside {
-  margin-top: 6rem;
+  margin-top: 10rem;
 }
 #hexagon4 #hexInside h1 {
   margin: 0.7rem;
@@ -247,11 +248,11 @@ header {
   font-weight: 400;
 }
 #hexagon4 #buttonHex {
-  padding: 5px;
+  padding: 9px;
   border: 1px solid white;
-  font-weight: 100;
-  font-size: 0.7rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+  font-size: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.2);
   text-transform: uppercase;
   transition: 0.3s;
 }
@@ -283,7 +284,7 @@ header {
   transform: scale(1.02);
 }
 #hexagon5 #hexInside {
-  margin-top: 6rem;
+  margin-top: 10rem;
 }
 #hexagon5 #hexInside h1 {
   margin: 0.7rem;
@@ -291,11 +292,11 @@ header {
   font-weight: 400;
 }
 #hexagon5 #buttonHex {
-  padding: 5px;
+  padding: 9px;
   border: 1px solid white;
-  font-weight: 100;
-  font-size: 0.7rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+  font-size: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.2);
   text-transform: uppercase;
   transition: 0.3s;
 }
@@ -318,7 +319,7 @@ header {
   margin: 0.5rem;
   position: absolute;
   left: 38%;
-  top: 58%;
+  top: 63%;
   filter: brightness(0.5) sepia(0.7);
   transition: 0.3s;
 }
@@ -327,7 +328,7 @@ header {
   transform: scale(1.02);
 }
 #hexagon6 #hexInside {
-  margin-top: 6rem;
+  margin-top: 10rem;
 }
 #hexagon6 #hexInside h1 {
   margin: 0.7rem;
@@ -335,11 +336,11 @@ header {
   font-weight: 400;
 }
 #hexagon6 #buttonHex {
-  padding: 5px;
+  padding: 9px;
   border: 1px solid white;
-  font-weight: 100;
-  font-size: 0.7rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+  font-size: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.2);
   text-transform: uppercase;
   transition: 0.3s;
 }

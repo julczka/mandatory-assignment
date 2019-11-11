@@ -21,12 +21,12 @@ $img: (
 );
 
 $top: (
-    1: 10%,
-    2: 10%,
-    3: 10%,
+    1: 5%,
+    2: 5%,
+    3: 5%,
     4: 34%,
     5: 34%,
-    6: 58%,
+    6: 63%,
 );
 
 $left: (
@@ -77,9 +77,16 @@ html {
 header {
   width: auto;
   height: 15vh;
-  background-color: black;
-  opacity: 0.3;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.8) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  
   position: sticky;
+  position: -webkit-sticky;
+  top: 0;
 }
 
 #sec1 {
@@ -109,7 +116,7 @@ header {
 }
 
 #hexgrad {
-  height: 130vh;
+  height: 110vh;
   background: linear-gradient(#603022, #eed9d8);
   @include flexCenter;
 }
@@ -150,7 +157,7 @@ header {
     }
 
     #hexInside {
-      margin-top: 6rem;
+      margin-top: 10rem;
       
 
       h1 {
@@ -161,11 +168,11 @@ header {
     }
 
     #buttonHex {
-      padding: 5px;
+      padding: 9px;
       border: 1px solid white;
-      font-weight: 100;
-      font-size: 0.7rem;
-      background-color: rgba(0, 0, 0, 0.5);
+      font-weight: 400;
+      font-size: 0.8rem;
+      background-color: rgba(0, 0, 0, 0.2);
       text-transform: uppercase;
       transition: 0.3s;
       &:hover {
