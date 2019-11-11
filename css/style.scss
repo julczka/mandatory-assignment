@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400&display=swap");
+
+$img1: url(../img/turkey-355498_1280.jpg);
+$img2: url(../img/morocco-123970_1280.jpg);
+$img3: url(../img/quad-2409489_1280.jpg);
+
+$hexagon:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  color: aliceblue;
+  background-color: black;
+}
+
+#bg1 {
+  background-image: url(../img/desert_up.png);
+  height: 100vh;
+  width: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#bg2 {
+  background-image: url(../img/desert_down.png);
+  height: 100vh;
+  width: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+header {
+  width: auto;
+  height: 15vh;
+  background-color: black;
+  opacity: 0.5;
+  position: sticky;
+}
+
+#sec1 {
+  @include flexCenter;
+  height: 85vh;
+}
+
+#banner {
+  text-align: center;
+  text-transform: uppercase;
+
+  @include flexCenter;
+
+  text-shadow: 0 0 60px #000000;
+
+  p {
+    font-size: 1rem;
+    font-weight: 200;
+    margin: 0px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 0px;
+  }
+}
+
+#hexgrad {
+  height: 100vh;
+  background: linear-gradient(#603022, #eed9d8);
+  @include flexCenter;
+
+
+  #hexagon1 {
+    height: 40vh;
+    width: 40vh;
+    background-image: $img1;
+    background-position: center center;
+    background-size: cover;
+    clip-path: $hexagon;
+    @include flexCenter;
+    flex-direction: column;
+
+            #hexInside {
+            margin-top: 6rem;
+
+            h1 {
+                margin: 0.7rem;
+                text-shadow: 0px 0px 20px black;
+                font-weight: 400;
+            }
+            }
+
+            #buttonHex {
+            padding: 5px;
+            border: 1px solid white;
+            font-weight: 100;
+            font-size: 0.7rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            text-transform: uppercase;
+            }
+  }
+}
+
+
+
+
+
+
+
+#sec2 {
+  height: auto;
+}
+
+footer {
+  height: 275px;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  position: relative;
+  top: 68%;
+}
