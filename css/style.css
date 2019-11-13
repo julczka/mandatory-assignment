@@ -4,19 +4,31 @@
     font-size: 8px;
   }
 }
-/*$img1: url(../img/turkey-355498_1280.jpg);
-$img2: url(../img/morocco-123970_1280.jpg);
-$img3: url(../img/quad-2409489_1280.jpg);
-$img4: url(../img/desert-fox-2444230_1280.jpg);
-$img5: url(../img/hut-945496_1280.jpg);
-$img6: url(../img/volkswagen-569315_1280.jpg);
-*/
 body,
 html {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   color: aliceblue;
   background-color: black;
+  cursor: default;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  cursor: default;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a:active {
+  color: white;
 }
 
 #bg1 {
@@ -38,6 +50,32 @@ html {
   position: relative;
 }
 
+#logo {
+  height: 80%;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.2s ease-in-out;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+#logo p {
+  margin: 0;
+  font-size: 0.5em;
+  font-weight: 400;
+}
+#logo #Capa_1 {
+  fill: white;
+  height: 4em;
+  width: 4em;
+  margin: 0.2em;
+}
+#logo:hover {
+  transform: scale(1.1);
+}
+
 header {
   width: auto;
   height: 15vh;
@@ -57,37 +95,11 @@ header a {
   align-items: center;
   flex-direction: column;
 }
-header #logo {
-  height: 80%;
-  width: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  box-sizing: border-box;
-  flex-grow: 1;
-}
-header #logo p {
-  margin: 0;
-  font-size: 0.5em;
-  font-weight: 400;
-}
-header #logo #Capa_1 {
-  fill: white;
-  height: 4em;
-  width: 4em;
-  margin: 0.2em;
-}
 header #menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-grow: 2;
-  /* Dropdown Content (Hidden by Default) */
-  /* Links inside the dropdown */
-  /* Change color of dropdown links on hover */
-  /* Show the dropdown menu on hover */
-  /* Change the background color of the dropdown button when the dropdown content is shown */
+  flex-grow: 10;
 }
 header #menu nav {
   display: flex;
@@ -103,6 +115,14 @@ header #menu .dropdown {
 }
 header #menu .dropdown i {
   padding: 0 1em 0 1em;
+}
+header #menu .dropdown:hover .dropdown-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header #menu .dropdown:hover .dropbtn {
+  transform: scale(1.1);
 }
 header #menu .dropbtn {
   transition: 0.2s ease-in-out;
@@ -123,22 +143,19 @@ header #menu .dropdown-content a {
   transition: 0.2s ease-in-out;
 }
 header #menu .dropdown-content a:hover {
-  transform: scale(1.2);
-}
-header #menu .dropdown:hover .dropdown-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-header #menu .dropdown:hover .dropbtn {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 header #social {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   box-sizing: border-box;
   flex-grow: 1;
+}
+header #social #socControl {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 header #social i {
   font-size: 1.1em;
@@ -174,6 +191,16 @@ header #social #shop div:nth-of-type(1) {
   height: 85vh;
 }
 
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
 #banner {
   text-align: center;
   text-transform: uppercase;
@@ -190,12 +217,20 @@ header #social #shop div:nth-of-type(1) {
   font-weight: 400;
   margin: 1.5em;
   letter-spacing: 0.1em;
+  animation: text-focus-in 1s ease-in 1s both;
 }
 #banner h1 {
   font-size: 3em;
   font-weight: 100;
   margin: 0px;
   letter-spacing: 0.1em;
+  animation: text-focus-in 1s ease-in both;
+}
+#banner i {
+  transition: 0.2s ease-in-out;
+}
+#banner i:hover {
+  transform: scale(1.1);
 }
 
 #hexgrad {
@@ -473,16 +508,102 @@ header #social #shop div:nth-of-type(1) {
   transform: scale(1.2);
 }
 
-#sec2 {
-  height: auto;
-}
-
 footer {
   height: 80%;
   width: 100%;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   bottom: 0;
+}
+footer #footerControl {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+footer #footerControl #mission {
+  text-align: center;
+  flex-grow: 2;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+footer #footerControl #mission h1 {
+  text-transform: uppercase;
+  font-weight: 200;
+  margin: 0;
+  padding: 1em;
+}
+footer #footerControl #mission p {
+  font-weight: 100;
+  margin: 0;
+  text-shadow: 0 0 10px black;
+}
+footer #footerControl #navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 5;
+  width: 100%;
+}
+footer #footerControl #navigation div:nth-child(-n+5) {
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+footer #footerControl #navigation .bottomNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 1em;
+  box-sizing: border-box;
+  width: 1666.6666666667%;
+  height: 100%;
+}
+footer #footerControl #navigation .bottomNav h4 {
+  margin: 0;
+  font-weight: 200;
+  text-transform: uppercase;
+  padding-top: 1em;
+}
+footer #footerControl #navigation .bottomNav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.5em;
+  font-weight: 100;
+  width: 100%;
+  padding-bottom: 1em;
+}
+footer #footerControl #navigation .bottomNav ul li {
+  padding: 0.5em;
+}
+footer #footerControl #navigation .bottomNav #socControl {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer #footerControl #navigation .bottomNav i {
+  font-size: 1.1em;
+  margin: 0 0.5em 0 0.5em;
+  transition: 0.2s ease-in-out;
+}
+footer #footerControl #navigation .bottomNav i:hover {
+  transform: scale(1.5);
+}
+footer #footerControl #copyrights {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 100;
+  font-size: 0.5em;
+  flex-grow: 1;
+  padding: 1em 0 0 0;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,18 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400&display=swap");
 
 @media screen and (max-width: 700px) {
-  body{
-    font-size: 8px;}}
-/*$img1: url(../img/turkey-355498_1280.jpg);
-$img2: url(../img/morocco-123970_1280.jpg);
-$img3: url(../img/quad-2409489_1280.jpg);
-$img4: url(../img/desert-fox-2444230_1280.jpg);
-$img5: url(../img/hut-945496_1280.jpg);
-$img6: url(../img/volkswagen-569315_1280.jpg);
-*/
+  body {
+    font-size: 8px;
+  }
+}
 
 $left: 25%;
 $right: 25%;
+
+// hexagon maps
 
 $img: (
   1: url(../img/turkey-355498_1280.jpg),
@@ -24,21 +21,21 @@ $img: (
 );
 
 $top: (
-    1: 5%,
-    2: 5%,
-    3: 5%,
-    4: 28.5%,
-    5: 28.5%,
-    6: 52%,
+  1: 5%,
+  2: 5%,
+  3: 5%,
+  4: 28.5%,
+  5: 28.5%,
+  6: 52%
 );
 
 $left: (
-    1: 4%,
-    2: 35%,
-    3: 66%,
-    4: 19.5%,
-    5: 50.5%,
-    6: 35%,
+  1: 4%,
+  2: 35%,
+  3: 66%,
+  4: 19.5%,
+  5: 50.5%,
+  6: 35%
 );
 
 $hexagon: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
@@ -51,11 +48,29 @@ $hexagon: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 
 body,
 html {
-  
   margin: 0;
   font-family: "Montserrat", sans-serif;
   color: aliceblue;
   background-color: black;
+  cursor: default;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  cursor: default;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a:active {
+  color: white;
 }
 
 #bg1 {
@@ -77,6 +92,33 @@ html {
   position: relative;
 }
 
+#logo {
+  height: 80%;
+  width: auto;
+  @include flexCenter;
+  flex-direction: column;
+  transition: 0.2s ease-in-out;
+  box-sizing: border-box;
+  flex-grow: 1;
+
+  p {
+    margin: 0;
+    font-size: 0.5em;
+    font-weight: 400;
+  }
+
+  #Capa_1 {
+    fill: white;
+    height: 4em;
+    width: 4em;
+    margin: 0.2em;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
 header {
   width: auto;
   height: 15vh;
@@ -86,7 +128,7 @@ header {
     rgba(0, 0, 0, 0.8) 50%,
     rgba(0, 0, 0, 1) 100%
   );
-  
+
   position: sticky;
   position: -webkit-sticky;
   top: 0;
@@ -94,42 +136,20 @@ header {
   align-items: center;
   justify-content: space-between;
 
-  a{
+  a {
     text-decoration: none;
     color: white;
     @include flexCenter;
     flex-direction: column;
   }
 
-  #logo {
-    height: 80%;
-    width: auto;
-    @include flexCenter;
-    flex-direction: column;
-    
-    box-sizing: border-box;
-    flex-grow: 1;
-    
-    p {
-      margin: 0;
-      font-size: .5em;
-      font-weight: 400;
-    }
-  
-  #Capa_1 {
-    fill: white;
-    height: 4em;
-    width: 4em;
-    margin: .2em;
-    
-  }
-}
+ 
 
   #menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-grow: 2;
+    flex-grow: 10;
 
     nav {
       display: flex;
@@ -137,110 +157,94 @@ header {
       justify-content: center;
       font-weight: 200;
       width: 100%;
-      
-      
     }
 
     .dropdown {
       position: relative;
       display: inline-block;
       padding: 0 1em 0 1em;
-     
-      
 
-      i{
-       padding: 0 1em 0 1em;
-        
+      i {
+        padding: 0 1em 0 1em;
       }
-      
+
+      &:hover .dropdown-content {
+        @include flexCenter;
+      }
+
+      &:hover .dropbtn {
+        transform: scale(1.1);
+      }
     }
-    
+
     .dropbtn {
-      transition: .2s ease-in-out;
+      transition: 0.2s ease-in-out;
     }
-    /* Dropdown Content (Hidden by Default) */
+
     .dropdown-content {
       display: none;
       position: absolute;
-      
-      
       z-index: 1;
     }
-    
-    /* Links inside the dropdown */
+
     .dropdown-content a {
       color: white;
       padding: 1em 3em 1em 0em;
       min-width: 3em;
       text-decoration: none;
       @include flexCenter;
-      transition: .2s ease-in-out;
-      
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
-    
-    /* Change color of dropdown links on hover */
-    .dropdown-content a:hover {transform: scale(1.2);}
-    
-    /* Show the dropdown menu on hover */
-    .dropdown:hover .dropdown-content {
-      @include flexCenter;
-      
-    }
-    
-    /* Change the background color of the dropdown button when the dropdown content is shown */
-    .dropdown:hover .dropbtn {
-      transform: scale(1.2);}
-
-
-
   }
 
   #social {
-    @include flexCenter;
-    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
     box-sizing: border-box;
     flex-grow: 1;
 
-   
+    #socControl {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
 
     i {
       font-size: 1.1em;
-      margin: 0 .5em 0 .5em;
-      transition: .2s ease-in-out;
-      
+      margin: 0 0.5em 0 0.5em;
+      transition: 0.2s ease-in-out;
+
       &:hover {
         transform: scale(1.5);
       }
     }
-    
-    
 
     #shop {
       @include flexCenter;
       border: 1px solid white;
-    
-      box-sizing: border-box;
-      
 
-        div {
-          height: 100%;
-          padding: .5em;
-          p{
-            margin:0;
-            font-size: .7em;
-          }
+      box-sizing: border-box;
+
+      div {
+        height: 100%;
+        padding: 0.5em;
+        p {
+          margin: 0;
+          font-size: 0.7em;
         }
+      }
 
       div:nth-of-type(1) {
-       border-right: 1px solid white;
-
-        
+        border-right: 1px solid white;
       }
     }
-
   }
-
-
 }
 
 #sec1 {
@@ -248,27 +252,51 @@ header {
   height: 85vh;
 }
 
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
 #banner {
   text-align: center;
   text-transform: uppercase;
-  background: radial-gradient(circle, rgba(96,48,34,.5) 0%, rgba(96,48,34,0) 47%);
+  background: radial-gradient(
+    circle,
+    rgba(96, 48, 34, 0.5) 0%,
+    rgba(96, 48, 34, 0) 47%
+  );
   @include flexCenter;
-height: 100%;
-width: 100%;
+  height: 100%;
+  width: 100%;
   text-shadow: 0 0 60px #000000;
 
   p {
     font-size: 1em;
     font-weight: 400;
     margin: 1.5em;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
+    animation: text-focus-in 1s ease-in 1s both;
   }
 
   h1 {
     font-size: 3em;
     font-weight: 100;
     margin: 0px;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
+    animation: text-focus-in 1s ease-in both;
+  }
+
+  i {
+    transition: 0.2s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -284,11 +312,10 @@ width: 100%;
   width: 1200px;
   margin: 0;
   padding: 0;
-  position: relative; 
-  
+  position: relative;
 }
 
-@for $i from 1 through 6 {  
+@for $i from 1 through 6 {
   #hexagon#{$i} {
     height: 30%;
     width: 30%;
@@ -296,27 +323,26 @@ width: 100%;
     background-position: center center;
     background-size: cover;
     clip-path: $hexagon;
-    -webkit-clip-path:$hexagon;
+    -webkit-clip-path: $hexagon;
     @include flexCenter;
     flex-direction: column;
-    
+
     position: absolute;
     left: map-get($left, $i);
     top: map-get($top, $i);
 
     //loop po mapie z top left etc zrob
-    
+
     filter: brightness(0.5) sepia(0.7);
     transition: 0.3s;
 
     &:hover {
-         filter: brightness(1) sepia(0);
-         transform: scale(1.02);
+      filter: brightness(1) sepia(0);
+      transform: scale(1.02);
     }
 
     #hexInside {
       margin-top: 10rem;
-      
 
       h1 {
         margin: 0.7rem;
@@ -334,15 +360,12 @@ width: 100%;
       text-transform: uppercase;
       transition: 0.3s;
       &:hover {
-          transform: scale(1.2)
+        transform: scale(1.2);
       }
     }
   }
 }
 
-#sec2 {
-  height: auto;
-}
 
 footer {
   height: 80%;
@@ -353,8 +376,118 @@ footer {
     rgba(0, 0, 0, 0.9) 0%,
     rgba(0, 0, 0, 0.7) 50%,
     rgba(0, 0, 0, 0) 100%
-  );
-  
+    );
+  @include flexCenter;
   position: absolute;
   bottom: 0;
+
+  #footerControl {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+  
+
+    #mission {
+      text-align: center;
+      flex-grow: 2;
+      border-top: 1px solid rgba(256, 256, 256, 0.5);
+      border-bottom: 1px solid rgba(256, 256, 256, 0.5);
+
+        h1{
+        text-transform: uppercase;
+        font-weight: 200;
+        margin: 0;
+        padding: 1em;
+        }
+
+        p {
+          font-weight: 100;
+          margin: 0;
+          text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+        }
+    }
+
+    #navigation {
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-grow: 5;
+      width: 100%;
+
+      div:nth-child(-n+5) {
+        border-right: 1px solid rgba(256, 256, 256, 0.5);
+      }
+
+      .bottomNav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(256, 256, 256, 0.5);
+        padding: 1em;
+        box-sizing: border-box;
+        width: 100/6 *100%;
+        height: 100%;
+
+      
+
+        h4 {
+          margin: 0;
+          font-weight: 200;
+          text-transform: uppercase;
+          padding-top: 1em;
+        }
+
+      
+
+        ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          font-size: .5em;
+          font-weight: 100;
+          width: 100%;
+          padding-bottom: 1em;
+          li {
+            padding: .5em;
+          }
+         
+        }
+
+        #socControl {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        }
+    
+        i {
+          font-size: 1.1em;
+          margin: 0 0.5em 0 0.5em;
+          transition: 0.2s ease-in-out;
+    
+          &:hover {
+            transform: scale(1.5);
+          }
+        }
+      }
+    }
+
+    #copyrights {
+
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 100;
+      font-size:.5em;
+      flex-grow: 1;
+      padding: 1em 0 0 0;
+    }
+
+  }
+
 }
