@@ -92,33 +92,6 @@ a:active {
   position: relative;
 }
 
-#logo {
-  height: 80%;
-  width: auto;
-  @include flexCenter;
-  flex-direction: column;
-  transition: 0.2s ease-in-out;
-  box-sizing: border-box;
-  flex-grow: 1;
-
-  p {
-    margin: 0;
-    font-size: 0.5em;
-    font-weight: 400;
-  }
-
-  #Capa_1 {
-    fill: white;
-    height: 4em;
-    width: 4em;
-    margin: 0.2em;
-  }
-
-  &:hover {
-    transform: scale(1.1);
-  }
-}
-
 header {
   width: auto;
   height: 15vh;
@@ -143,7 +116,32 @@ header {
     flex-direction: column;
   }
 
- 
+  #logo {
+    height: 80%;
+    width: auto;
+    @include flexCenter;
+    flex-direction: column;
+    transition: 0.2s ease-in-out;
+    box-sizing: border-box;
+    flex-grow: 1;
+
+    p {
+      margin: 0;
+      font-size: 0.5em;
+      font-weight: 400;
+    }
+
+    #Capa_1 {
+      fill: white;
+      height: 4em;
+      width: 4em;
+      margin: 0.2em;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 
   #menu {
     display: flex;

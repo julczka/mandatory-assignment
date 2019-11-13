@@ -50,32 +50,6 @@ a:active {
   position: relative;
 }
 
-#logo {
-  height: 80%;
-  width: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  transition: 0.2s ease-in-out;
-  box-sizing: border-box;
-  flex-grow: 1;
-}
-#logo p {
-  margin: 0;
-  font-size: 0.5em;
-  font-weight: 400;
-}
-#logo #Capa_1 {
-  fill: white;
-  height: 4em;
-  width: 4em;
-  margin: 0.2em;
-}
-#logo:hover {
-  transform: scale(1.1);
-}
-
 header {
   width: auto;
   height: 15vh;
@@ -94,6 +68,31 @@ header a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+header #logo {
+  height: 80%;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.2s ease-in-out;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+header #logo p {
+  margin: 0;
+  font-size: 0.5em;
+  font-weight: 400;
+}
+header #logo #Capa_1 {
+  fill: white;
+  height: 4em;
+  width: 4em;
+  margin: 0.2em;
+}
+header #logo:hover {
+  transform: scale(1.1);
 }
 header #menu {
   display: flex;
