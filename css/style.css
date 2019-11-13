@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400&display=swap");
-@media screen and (max-width: 601px) {
+@media screen and (max-width: 700px) {
   body {
     font-size: 8px;
   }
@@ -45,6 +45,126 @@ header {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+header #logo {
+  height: 80%;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+header #logo p {
+  margin: 0;
+  font-size: 0.5em;
+  font-weight: 400;
+}
+header #logo #Capa_1 {
+  fill: white;
+  height: 4em;
+  width: 4em;
+  margin: 0.2em;
+}
+header #menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 2;
+  /* Dropdown Content (Hidden by Default) */
+  /* Links inside the dropdown */
+  /* Change color of dropdown links on hover */
+  /* Show the dropdown menu on hover */
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+}
+header #menu nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 200;
+  width: 100%;
+}
+header #menu .dropdown {
+  position: relative;
+  display: inline-block;
+  padding: 0 1em 0 1em;
+}
+header #menu .dropdown i {
+  padding: 0 1em 0 1em;
+}
+header #menu .dropbtn {
+  transition: 0.2s ease-in-out;
+}
+header #menu .dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+header #menu .dropdown-content a {
+  color: white;
+  padding: 1em 3em 1em 0em;
+  min-width: 3em;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s ease-in-out;
+}
+header #menu .dropdown-content a:hover {
+  transform: scale(1.2);
+}
+header #menu .dropdown:hover .dropdown-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header #menu .dropdown:hover .dropbtn {
+  transform: scale(1.2);
+}
+header #social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+header #social i {
+  font-size: 1.1em;
+  margin: 0 0.5em 0 0.5em;
+  transition: 0.2s ease-in-out;
+}
+header #social i:hover {
+  transform: scale(1.5);
+}
+header #social #shop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  box-sizing: border-box;
+}
+header #social #shop div {
+  height: 100%;
+  padding: 0.5em;
+}
+header #social #shop div p {
+  margin: 0;
+  font-size: 0.7em;
+}
+header #social #shop div:nth-of-type(1) {
+  border-right: 1px solid white;
 }
 
 #sec1 {
@@ -57,20 +177,25 @@ header {
 #banner {
   text-align: center;
   text-transform: uppercase;
+  background: radial-gradient(circle, rgba(96, 48, 34, 0.5) 0%, rgba(96, 48, 34, 0) 47%);
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  width: 100%;
   text-shadow: 0 0 60px #000000;
 }
 #banner p {
   font-size: 1em;
-  font-weight: 200;
-  margin: 0px;
+  font-weight: 400;
+  margin: 1.5em;
+  letter-spacing: 0.1em;
 }
 #banner h1 {
   font-size: 3em;
-  font-weight: 400;
+  font-weight: 100;
   margin: 0px;
+  letter-spacing: 0.1em;
 }
 
 #hexgrad {

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400&display=swap");
 
-@media screen and (max-width: 601px) {
+@media screen and (max-width: 700px) {
   body{
     font-size: 8px;}}
 /*$img1: url(../img/turkey-355498_1280.jpg);
@@ -90,6 +90,157 @@ header {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  a{
+    text-decoration: none;
+    color: white;
+    @include flexCenter;
+    flex-direction: column;
+  }
+
+  #logo {
+    height: 80%;
+    width: auto;
+    @include flexCenter;
+    flex-direction: column;
+    
+    box-sizing: border-box;
+    flex-grow: 1;
+    
+    p {
+      margin: 0;
+      font-size: .5em;
+      font-weight: 400;
+    }
+  
+  #Capa_1 {
+    fill: white;
+    height: 4em;
+    width: 4em;
+    margin: .2em;
+    
+  }
+}
+
+  #menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 2;
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 200;
+      width: 100%;
+      
+      
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      padding: 0 1em 0 1em;
+     
+      
+
+      i{
+       padding: 0 1em 0 1em;
+        
+      }
+      
+    }
+    
+    .dropbtn {
+      transition: .2s ease-in-out;
+    }
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      
+      
+      z-index: 1;
+    }
+    
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: white;
+      padding: 1em 3em 1em 0em;
+      min-width: 3em;
+      text-decoration: none;
+      @include flexCenter;
+      transition: .2s ease-in-out;
+      
+    }
+    
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {transform: scale(1.2);}
+    
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+      @include flexCenter;
+      
+    }
+    
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {
+      transform: scale(1.2);}
+
+
+
+  }
+
+  #social {
+    @include flexCenter;
+    
+    box-sizing: border-box;
+    flex-grow: 1;
+
+   
+
+    i {
+      font-size: 1.1em;
+      margin: 0 .5em 0 .5em;
+      transition: .2s ease-in-out;
+      
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+    
+    
+
+    #shop {
+      @include flexCenter;
+      border: 1px solid white;
+    
+      box-sizing: border-box;
+      
+
+        div {
+          height: 100%;
+          padding: .5em;
+          p{
+            margin:0;
+            font-size: .7em;
+          }
+        }
+
+      div:nth-of-type(1) {
+       border-right: 1px solid white;
+
+        
+      }
+    }
+
+  }
+
+
 }
 
 #sec1 {
@@ -100,21 +251,24 @@ header {
 #banner {
   text-align: center;
   text-transform: uppercase;
-
+  background: radial-gradient(circle, rgba(96,48,34,.5) 0%, rgba(96,48,34,0) 47%);
   @include flexCenter;
-
+height: 100%;
+width: 100%;
   text-shadow: 0 0 60px #000000;
 
   p {
     font-size: 1em;
-    font-weight: 200;
-    margin: 0px;
+    font-weight: 400;
+    margin: 1.5em;
+    letter-spacing: .1em;
   }
 
   h1 {
     font-size: 3em;
-    font-weight: 400;
+    font-weight: 100;
     margin: 0px;
+    letter-spacing: .1em;
   }
 }
 
