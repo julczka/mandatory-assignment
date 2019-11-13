@@ -56,6 +56,7 @@ header {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 50%, black 100%);
   position: sticky;
   position: -webkit-sticky;
+  z-index: 6;
   top: 0;
   display: flex;
   align-items: center;
@@ -190,7 +191,7 @@ header #social #shop div:nth-of-type(1) {
   height: 85vh;
 }
 
-@keyframes text-focus-in {
+@keyframes textFocusIn {
   0% {
     filter: blur(12px);
     opacity: 0;
@@ -216,14 +217,14 @@ header #social #shop div:nth-of-type(1) {
   font-weight: 400;
   margin: 1.5em;
   letter-spacing: 0.1em;
-  animation: text-focus-in 1s ease-in 1s both;
+  animation: textFocusIn 3s ease-in 1s both;
 }
 #banner h1 {
   font-size: 3em;
   font-weight: 100;
   margin: 0px;
   letter-spacing: 0.1em;
-  animation: text-focus-in 1s ease-in both;
+  animation: textFocusIn 2s ease-in both;
 }
 #banner i {
   transition: 0.2s ease-in-out;
@@ -242,8 +243,8 @@ header #social #shop div:nth-of-type(1) {
 }
 
 #hexControl {
-  height: 1200px;
-  width: 1200px;
+  height: 1080px;
+  width: 1080px;
   margin: 0;
   padding: 0;
   position: relative;
@@ -263,7 +264,7 @@ header #social #shop div:nth-of-type(1) {
   flex-direction: column;
   position: absolute;
   left: 4%;
-  top: 5%;
+  top: 4%;
   filter: brightness(0.5) sepia(0.7);
   transition: 0.3s;
 }
@@ -306,7 +307,7 @@ header #social #shop div:nth-of-type(1) {
   flex-direction: column;
   position: absolute;
   left: 35%;
-  top: 5%;
+  top: 4%;
   filter: brightness(0.5) sepia(0.7);
   transition: 0.3s;
 }
@@ -349,7 +350,7 @@ header #social #shop div:nth-of-type(1) {
   flex-direction: column;
   position: absolute;
   left: 66%;
-  top: 5%;
+  top: 4%;
   filter: brightness(0.5) sepia(0.7);
   transition: 0.3s;
 }
@@ -392,7 +393,7 @@ header #social #shop div:nth-of-type(1) {
   flex-direction: column;
   position: absolute;
   left: 19.5%;
-  top: 28.5%;
+  top: 27.5%;
   filter: brightness(0.5) sepia(0.7);
   transition: 0.3s;
 }
@@ -435,7 +436,7 @@ header #social #shop div:nth-of-type(1) {
   flex-direction: column;
   position: absolute;
   left: 50.5%;
-  top: 28.5%;
+  top: 27.5%;
   filter: brightness(0.5) sepia(0.7);
   transition: 0.3s;
 }
@@ -478,7 +479,7 @@ header #social #shop div:nth-of-type(1) {
   flex-direction: column;
   position: absolute;
   left: 35%;
-  top: 52%;
+  top: 51%;
   filter: brightness(0.5) sepia(0.7);
   transition: 0.3s;
 }
@@ -522,7 +523,7 @@ footer #footerControl {
   height: 70%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-direction: column;
 }
 footer #footerControl #mission {
@@ -530,6 +531,7 @@ footer #footerControl #mission {
   flex-grow: 2;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  width: 100%;
 }
 footer #footerControl #mission h1 {
   text-transform: uppercase;
@@ -546,10 +548,10 @@ footer #footerControl #navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-grow: 5;
+  flex-grow: 3;
   width: 100%;
 }
-footer #footerControl #navigation div:nth-child(-n+5) {
+footer #footerControl #navigation .bottomNav:nth-child(-n+5) {
   border-right: 1px solid rgba(255, 255, 255, 0.5);
 }
 footer #footerControl #navigation .bottomNav {
@@ -568,6 +570,7 @@ footer #footerControl #navigation .bottomNav h4 {
   font-weight: 200;
   text-transform: uppercase;
   padding-top: 1em;
+  font-size: 0.7em;
 }
 footer #footerControl #navigation .bottomNav ul {
   list-style: none;
@@ -580,19 +583,54 @@ footer #footerControl #navigation .bottomNav ul {
 }
 footer #footerControl #navigation .bottomNav ul li {
   padding: 0.5em;
+  transition: 0.2s ease-in-out;
+}
+footer #footerControl #navigation .bottomNav ul li:hover {
+  transform: scale(1.1);
 }
 footer #footerControl #navigation .bottomNav #socControl {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding-bottom: 6em;
 }
 footer #footerControl #navigation .bottomNav i {
-  font-size: 1.1em;
+  font-size: 1.5em;
   margin: 0 0.5em 0 0.5em;
   transition: 0.2s ease-in-out;
 }
 footer #footerControl #navigation .bottomNav i:hover {
   transform: scale(1.5);
+}
+footer #footerControl #navigation .bottomNav #logo {
+  height: 100%;
+  width: auto;
+  transition: 0.2s ease-in-out;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+footer #footerControl #navigation .bottomNav #logo a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer #footerControl #navigation .bottomNav #logo p {
+  margin: 0;
+  font-size: 1em;
+  font-weight: 400;
+  text-align: center;
+}
+footer #footerControl #navigation .bottomNav #logo #Capa_1 {
+  fill: white;
+  height: 4em;
+  width: 4em;
+  margin: 0.2em;
+}
+footer #footerControl #navigation .bottomNav #logo:hover {
+  transform: scale(1.1);
 }
 footer #footerControl #copyrights {
   width: 100%;
