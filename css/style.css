@@ -11,10 +11,10 @@ html {
   color: aliceblue;
   background-color: black;
   cursor: default;
+  scroll-behavior: smooth;
 }
 
 a {
-  text-decoration: none;
   color: white;
   cursor: default;
 }
@@ -152,6 +152,7 @@ header #social {
   height: 100%;
   box-sizing: border-box;
   flex-grow: 1;
+  padding-right: 1em;
 }
 header #social #socControl {
   display: flex;
