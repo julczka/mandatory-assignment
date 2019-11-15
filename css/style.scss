@@ -4,9 +4,7 @@
   body {
     font-size: 8px;
   }
-
 }
-
 
 // hexagon maps
 
@@ -41,7 +39,6 @@ $hexagon: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 
 //mixin for flex
 
-
 @mixin flexCenter {
   display: flex;
   justify-content: center;
@@ -56,13 +53,13 @@ html {
   font-family: "Montserrat", sans-serif;
   color: aliceblue;
   background-color: black;
-  cursor: default;
   scroll-behavior: smooth;
+  cursor: default;
 }
 
 a {
   color: white;
-  cursor: default;
+  
 }
 
 a:link {
@@ -196,8 +193,8 @@ header {
 
     .dropdown-content a {
       color: white;
-      padding: 1em 3em 1em 0em;
-      min-width: 3em;
+      padding-top: 1em;
+      min-width: 6em;
       text-decoration: none;
       @include flexCenter;
       transition: 0.2s ease-in-out;
@@ -531,9 +528,7 @@ footer {
       margin: 0.2em;
     }
 
-    &:hover {
-      transform: scale(1.1);
-    }
+    
   }
 }
 .bottomNav:nth-child(-n + 5) {
