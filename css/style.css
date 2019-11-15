@@ -149,13 +149,19 @@ header #social {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  height: 100%;
   box-sizing: border-box;
   flex-grow: 1;
 }
 header #social #socControl {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  height: 100%;
+}
+header #social .socIcon {
+  background: url(../img/HEXAGON.svg) center no-repeat;
+  padding: 1em;
 }
 header #social i {
   font-size: 1.1em;
@@ -163,7 +169,7 @@ header #social i {
   transition: 0.2s ease-in-out;
 }
 header #social i:hover {
-  transform: scale(1.5);
+  transform: scale(1.3);
 }
 header #social #shop {
   display: flex;
@@ -290,7 +296,7 @@ header #social #shop div:nth-of-type(1) {
   transition: 0.3s;
 }
 #hexagon1 #buttonHex:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 #hexagon2 {
@@ -333,7 +339,7 @@ header #social #shop div:nth-of-type(1) {
   transition: 0.3s;
 }
 #hexagon2 #buttonHex:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 #hexagon3 {
@@ -376,7 +382,7 @@ header #social #shop div:nth-of-type(1) {
   transition: 0.3s;
 }
 #hexagon3 #buttonHex:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 #hexagon4 {
@@ -419,7 +425,7 @@ header #social #shop div:nth-of-type(1) {
   transition: 0.3s;
 }
 #hexagon4 #buttonHex:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 #hexagon5 {
@@ -462,7 +468,7 @@ header #social #shop div:nth-of-type(1) {
   transition: 0.3s;
 }
 #hexagon5 #buttonHex:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 #hexagon6 {
@@ -505,7 +511,7 @@ header #social #shop div:nth-of-type(1) {
   transition: 0.3s;
 }
 #hexagon6 #buttonHex:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 footer {
@@ -518,7 +524,8 @@ footer {
   position: absolute;
   bottom: 0;
 }
-footer #footerControl {
+
+#footerControl {
   width: 70%;
   height: 70%;
   display: flex;
@@ -526,53 +533,54 @@ footer #footerControl {
   justify-content: space-between;
   flex-direction: column;
 }
-footer #footerControl #mission {
+
+#mission {
   text-align: center;
   flex-grow: 2;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0 0 1em 0;
   width: 100%;
 }
-footer #footerControl #mission h1 {
+#mission h1 {
   text-transform: uppercase;
   font-weight: 200;
   margin: 0;
   padding: 1em;
 }
-footer #footerControl #mission p {
+#mission p {
   font-weight: 100;
   margin: 0;
   text-shadow: 0 0 10px black;
 }
-footer #footerControl #navigation {
+
+#navigation {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   flex-grow: 3;
   width: 100%;
+  height: 75%;
 }
-footer #footerControl #navigation .bottomNav:nth-child(-n+5) {
-  border-right: 1px solid rgba(255, 255, 255, 0.5);
-}
-footer #footerControl #navigation .bottomNav {
+
+.bottomNav {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  padding: 1em;
+  padding: 0.7em;
   box-sizing: border-box;
-  width: 1666.6666666667%;
-  height: 100%;
+  flex: 1;
 }
-footer #footerControl #navigation .bottomNav h4 {
+.bottomNav h4 {
   margin: 0;
   font-weight: 200;
   text-transform: uppercase;
   padding-top: 1em;
   font-size: 0.7em;
 }
-footer #footerControl #navigation .bottomNav ul {
+.bottomNav ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -581,58 +589,68 @@ footer #footerControl #navigation .bottomNav ul {
   width: 100%;
   padding-bottom: 1em;
 }
-footer #footerControl #navigation .bottomNav ul li {
+.bottomNav ul li {
   padding: 0.5em;
   transition: 0.2s ease-in-out;
 }
-footer #footerControl #navigation .bottomNav ul li:hover {
+.bottomNav ul li:hover {
   transform: scale(1.1);
 }
-footer #footerControl #navigation .bottomNav #socControl {
+.bottomNav #socControl {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding-bottom: 6em;
+  height: 100%;
+  width: 100%;
 }
-footer #footerControl #navigation .bottomNav i {
-  font-size: 1.5em;
-  margin: 0 0.5em 0 0.5em;
+.bottomNav .socIcon {
+  background: url(../img/HEXAGON.svg) center no-repeat;
+  padding: 1em;
+}
+.bottomNav i {
+  font-size: 1.2em;
   transition: 0.2s ease-in-out;
 }
-footer #footerControl #navigation .bottomNav i:hover {
-  transform: scale(1.5);
+.bottomNav i:hover {
+  transform: scale(1.2);
 }
-footer #footerControl #navigation .bottomNav #logo {
+.bottomNav a {
+  text-decoration: none;
+  color: white;
+  height: 100%;
+}
+.bottomNav #logo {
   height: 100%;
   width: auto;
   transition: 0.2s ease-in-out;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
   flex-grow: 1;
 }
-footer #footerControl #navigation .bottomNav #logo a {
-  text-decoration: none;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-footer #footerControl #navigation .bottomNav #logo p {
+.bottomNav #logo p {
   margin: 0;
   font-size: 1em;
   font-weight: 400;
   text-align: center;
 }
-footer #footerControl #navigation .bottomNav #logo #Capa_1 {
+.bottomNav #logo #Capa_1 {
   fill: white;
   height: 4em;
   width: 4em;
   margin: 0.2em;
 }
-footer #footerControl #navigation .bottomNav #logo:hover {
+.bottomNav #logo:hover {
   transform: scale(1.1);
 }
-footer #footerControl #copyrights {
+
+.bottomNav:nth-child(-n+5) {
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#copyrights {
   width: 100%;
   display: flex;
   justify-content: space-between;
